@@ -5,17 +5,19 @@
   <title>
     Virtual Realms
   </title>
-  <link rel="stylesheet" type="text/css" href="/abc.css" 
-  <script
+  <link rel="stylesheet" type="text/css" href="css/abc.css" <script
     src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
   </script>
   </script>
   <script>
-    $(document).ready(function () {
-      $('#btntg1').click(function () {
-        $('#video1').toggle();
-      })
-    })
+    function toggleVisibility(id) {
+      let content = document.getElementById(id);
+      if (content.style.display === "none") {
+        content.style.display = "block";
+      } else {
+        content.style.display = "none";
+      }
+    }
   </script>
 </head>
 
@@ -64,14 +66,13 @@
           located on Jupiter's moon, Callisto.
         </p>
 
-        <div class="video1">
-          <p>Source Youtube</p>
+        <div id="video1" style="display:none">
           <iframe width="400" height="225" src="https://www.youtube.com/embed/U9rSAmdywD4"
             title="The Callisto Protocol - Official Launch Trailer" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
         </div>
-        <button id="btntg1">Watch Tralier</button>
+        <button onclick="toggleVisibility('video1');">Watch Trailer</button>
 
         </td>
         </div>
@@ -85,11 +86,13 @@
               Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, Red Dead Redemption 2
               is an epic tale of honor and loyalty at the dawn of the modern age.</p>
         </div>
-        <div class="video2">
-          <iframe width="400" height="225" src="https://www.youtube.com/embed/gmA6MrX81z4" title="Red Dead Redemption 2 Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div id="video2" style="display:none">
+          <iframe width="400" height="225" src="https://www.youtube.com/embed/gmA6MrX81z4"
+            title="Red Dead Redemption 2 Trailer" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
         </div>
-        <button id="btntg2">Watch Tralier</button>
-        </td>
+        <button onclick="toggleVisibility('video2');">Watch Trailer</button> </td>
       </tr>
       <tr>
         <div class="game-card">
@@ -101,11 +104,13 @@
               they must pull off a series of dangerous heists to survive in a city in which they can trust nobody, least
               of all each other.</p>
         </div>
-        <div class="video3">
-          <iframe width="400" height="225" src="https://www.youtube.com/embed/QkkoHAzjnUs" title="Grand Theft Auto V Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div id="video3" style="display:none">
+          <iframe width="400" height="225" src="https://www.youtube.com/embed/QkkoHAzjnUs"
+            title="Grand Theft Auto V Trailer" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
         </div>
-        <button id="btntg3">Watch Tralier</button>
-        </td>
+        <button onclick="toggleVisibility('video3');">Watch Trailer</button> </td>
       </tr>
       <tr>
         <div class="game-card">
@@ -117,14 +122,13 @@
           on the role of Jacob Lee – a victim of fate thrown into Black Iron Prison, a maximum-security penitentiary
           located on Jupiter's moon, Callisto.
         </p>
-        <div class="video4">
+        <div id="video4" style="display:none">
           <iframe width="400" height="225" src="https://www.youtube.com/embed/U9rSAmdywD4"
             title="The Callisto Protocol - Official Launch Trailer" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
         </div>
-        <button id="btntg4">Watch Tralier</button>
-        </td>
+        <button onclick="toggleVisibility('video4');">Watch Trailer</button> </td>
         </div>
       </tr>
       <tr>
@@ -136,11 +140,13 @@
               Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, Red Dead Redemption 2
               is an epic tale of honor and loyalty at the dawn of the modern age.</p>
         </div>
-        <div class="video5">
-          <iframe width="400" height="225" src="https://www.youtube.com/embed/gmA6MrX81z4" title="Red Dead Redemption 2 Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div id="video5" style="display:none">
+          <iframe width="400" height="225" src="https://www.youtube.com/embed/gmA6MrX81z4"
+            title="Red Dead Redemption 2 Trailer" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
         </div>
-        <button id="btntg5">Watch Tralier</button>
-        </td>
+        <button onclick="toggleVisibility('video5');">Watch Trailer</button> </td>
       </tr>
       <tr>
         <div class="game-card">
@@ -152,11 +158,13 @@
               they must pull off a series of dangerous heists to survive in a city in which they can trust nobody, least
               of all each other.</p>
         </div>
-        <div class="video6">
-          <iframe width="400" height="225" src="https://www.youtube.com/embed/QkkoHAzjnUs" title="Grand Theft Auto V Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div id="video6" style="display:none">
+          <iframe width="400" height="225" src="https://www.youtube.com/embed/QkkoHAzjnUs"
+            title="Grand Theft Auto V Trailer" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
         </div>
-        <button id="btntg6">Watch Tralier</button>
-        </td>
+        <button onclick="toggleVisibility('video6');">Watch Trailer</button> </td>
       </tr>
     </table>
   </section>
